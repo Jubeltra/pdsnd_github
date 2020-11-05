@@ -40,14 +40,14 @@ def get_filters():
         if month_name.lower() in MONTH_DATA:
             month = month_name.lower()
         else:
-            print('Available data only for months from january to june or all')
+            print('Available data only for month from january to june or all')
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
     day_name = ''
 
     while day_name.lower() not in DAY_DATA:
-        day_name = input('Write the day of the week you want to explore. Type all if you don\´t want filters')
+        day_name = input('Write the day of the week you want. Type all if you don\´t want filters')
         if day_name.lower() in DAY_DATA:
             day = day_name.lower()
         else:
@@ -109,7 +109,6 @@ def time_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
