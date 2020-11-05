@@ -6,7 +6,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-MONTH_DATA = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
+MONTH_DATA = ['january': 1, 'february': 2, 'march': 3, 'april': 4, 'may': 5, 'june': 6, 'all': 7]
 
 DAY_DATA = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday','sunday', 'all']
 
@@ -40,18 +40,18 @@ def get_filters():
         if month_name.lower() in MONTH_DATA:
             month = month_name.lower()
         else:
-            print('Available data only for months from january to june or all of them')
+            print('Available data only for month from january to june or all')
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
     day_name = ''
 
     while day_name.lower() not in DAY_DATA:
-        day_name = input('Write the day of the week you want to explore. Type all if you don\´t want filters')
+        day_name = input('Write the day of the week you want. Type all if you don\´t want filters')
         if day_name.lower() in DAY_DATA:
             day = day_name.lower()
         else:
-            print('Available data only for the name of days of the week')
+            print('Available data only for name of days of the week')
 
     print('-'*40)
     return city, month, day
@@ -95,7 +95,9 @@ def time_stats(df):
 
     # TO DO: display the most common month
 
-    print(df['month'].mode()[0])
+    common_month = df['month'].mode()[0]
+
+    print(f"Most common Month (1 = January,...,6 = June): {common_month}")
 
     # TO DO: display the most common day of week
 
@@ -107,7 +109,6 @@ def time_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
