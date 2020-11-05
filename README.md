@@ -1,15 +1,17 @@
 ### Date created
-Include the date you created this project and README file.
+El proyecto fue creado el 15 de octubre de 2020. El presente archivo es del 05 de noviembre de 2020
 
 ### Project Title
-Replace the Project Title
+Bikeshare Project - Udacity Programming for Data Science with Python Nanodegree Program
 
 ### Description
-Describe what your project is about and what it does
+Muestra la información de renta de bicicletas para tres ciudades de EEUU
 
 ### Files used
-Include the files used
+bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Archivos provistos por Udacity. Consulta de base de datos y documentacion
